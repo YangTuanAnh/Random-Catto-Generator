@@ -4,6 +4,7 @@ async function getCattoPic()
     const data = await res.json()
     var image = document.querySelector('img')
     image.src = data[0]['url']
+    image.style.visibility = "visible";
 }
 var btn = document.querySelector('button')
 btn.addEventListener('click', () => getCattoPic())
